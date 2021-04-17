@@ -1,0 +1,73 @@
+.mailList {
+  flex: 1;
+  overflow: scroll;
+}
+
+.mailList__settings {
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  border-bottom: 1px solid whitesmoke;
+  background-color: white;
+  z-index: 999;
+  padding-right: 10px;
+}
+
+.mailList__sections {
+  position: sticky;
+  top: 0;
+  display: flex;
+  border-bottom: 1px solid whitesmoke;
+  background-color: white;
+  z-index: 999;
+}
+
+.mailList__list {
+  position: relative;
+  padding-bottom: 20%;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.mailList__list::-webkit-scrollbar {
+  display: none;
+}
+
+svg circle {
+  height: 3px;
+  stroke: green;
+  stroke-dasharray: 60px;
+  animation: animate 3s linear infinite;
+  transform-origin: center;
+}
+@keyframes animate {
+  0% {
+    stroke-dashoffset: -0px;
+    transform: rotate(0deg);
+  }
+  25% {
+    stroke-dashoffset: -60px;
+    stroke: yellow;
+  }
+  50% {
+    stroke-dashoffset: -120px;
+    stroke: red;
+  }
+  75% {
+    stroke-dashoffset: -180px;
+    stroke: blue;
+  }
+  100% {
+    stroke-dashoffset: -240px;
+    transform: rotate(360deg);
+  }
+}
+
+.noMails {
+  margin-top: 20%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+}
